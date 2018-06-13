@@ -1,16 +1,19 @@
 class Triangle
   def initialize(a,b,c)
-    kind(a,b,c)
+    @a=a
+    @b=b
+    @c=c
+    kind
   end
-  def kind(a,b,c)
-  if a+b<=c||a+c<=b||c+b<=a
+  def kind
+  if @a+@b<=@c||@a+@c<=@b||@c+@b<=@a
     TriangleError
-  elsif a<0||b<0||c<0
+  elsif @a<0||@b<0||@c<0
     TriangleError
   else
-    if a==b&&b==c
+    if @a==@b&&@b==@c
       type= :equilateral
-      elsif a==b||b==c||a==c
+      elsif @a==@b||@b==@c||@a==@c
       type = :isosceles
     else
       type = :scalene
