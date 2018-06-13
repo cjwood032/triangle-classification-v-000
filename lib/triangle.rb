@@ -1,5 +1,5 @@
 class Triangle
-  def kind(a,b,c)
+  def initialize(a,b,c)
   if a+b<=c||a+c<=b||c+b<=a
     TriangleError
   elsif a<0||b<0||c<0
