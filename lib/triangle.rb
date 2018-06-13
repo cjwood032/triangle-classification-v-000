@@ -7,9 +7,9 @@ class Triangle
   end
   def kind
   if @a+@b<=@c||@a+@c<=@b||@c+@b<=@a
-    TriangleError
+    raise TriangleError
   elsif @a<=0||@b<=0||@c<=0
-    TriangleError
+    raise TriangleError
   else
     if @a==@b&&@b==@c
       type= :equilateral
