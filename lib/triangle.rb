@@ -1,4 +1,14 @@
 class Triangle
+  def kind(a,b,c)
+  if a+b<=c||a+c<=b||c+b<=a
+    TriangleError
+  elsif a<0||b<0||c<0
+    TriangleError
+  else
+    return type
+  end
+  
+  end
   class TriangleError < StandardError
     
   end
