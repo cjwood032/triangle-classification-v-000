@@ -5,9 +5,10 @@ class Triangle
   elsif a<0||b<0||c<0
     TriangleError
   else
-    return type
+    if a==b&&b==c
+      type= :equilateral
   end
-  
+  return type
   end
   class TriangleError < StandardError
     
