@@ -7,10 +7,15 @@ class Triangle
   else
     if a==b&&b==c
       type= :equilateral
+      elsif a==b||b==c||a==c
+      type = :isosceles
+    else
+      type = :scalene
+    end
   end
   return type
   end
   class TriangleError < StandardError
-    
+  puts "this is not a valid triangle!"  
   end
 end
